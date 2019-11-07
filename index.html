@@ -5,39 +5,24 @@
     <title>我的第一个网页</title>
     <!--内部样式-->
     <style type="text/css">
-        p{
-            color: #0046f3;
-        }
+
     </style>
     <!--外部样式-->
     <link type="text/css" rel="stylesheet" href="css/style.css">
-
     <!--脚本-->
     <script>
 
     </script>
 </head>
 <body>
-<!--标题-->
 <a name="mao1"></a>
-<h1>JavaScript学习</h1>
 
-<!--段落、换行-->
-<p>我才开始学，加油！</p>
-<p>好好学习<br>
-    天天向上</p>
-
-<!--图片-->
-<img src="img/1.jpg" alt="北京"
-     width="400" height="70" title="风景">
-
-<!--链接-->
-<a href="img/2.jpg" target="_blank">下一个图片</a>
-<!--锚点跳转-->
-<a href="#mao1">回到顶部</a>
-<br>
-<!--表格-->
-<table border="1" bgcolor="#f5f5dc">
+<div id="div1">
+    <h1>JavaScript学习</h1>
+</div>
+<div id="div2">
+    <!--表格-->
+<table border="1" id="table1"">
     <caption>一周课程表</caption>
     <tr bgcolor="#7fffd4">
         <th>课程表</th><th>星期一</th><th>星期二</th><th>星期三</th>
@@ -74,11 +59,13 @@
         <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
     </tr>
 </table>
-<div>
-    <!--这是注释，不会解析的代码-->
 </div>
-<p>希望下次回来，
-    &lt;学&gt;&quot;有所获&quot;</p>
+<div id="div3">
+<p id="hope">希望下次回来，
+    &quot;&lt;学&gt;有所获&quot;</p>
+
+</div>
 <button onclick="alert('按钮\n单击效果')">单击试验</button>
+<a href="#mao1" >回到顶部</a>
 </body>
 </html>

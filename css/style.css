@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#hope{
+    color: #0046f3;
+}
+ #table1{
+     background-color: darkgray ;
+     text-align: center;
+     font-style: unset;
+ }
+ #div1{
+     background-color: beige;
+     vertical-align: middle;
+ }
+ #div2{
+     /*width: 900px;*/
+     /*height: 400px;*/
+     background-color: antiquewhite;
+     vertical-align: middle;
+ }
+ #div3{
+     background-color: khaki;
+ }
