@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+li a{
+    color: #881081;
+}
+#menu{
+    background-image: url("../img/shamo.jpg");
+    width: 110px;
+    margin: 40px;
+}
+#menu li{
+    font-size: 14px;
+}
+#menu>li>a{
+    display: block;
+    padding-left: 10px;
+    width: 100px;
+    background-color: #5bf3a9;
+}
+#menu ul{
+    display: none;
+}
+#menu ul li{
+    text-indent: 40px;
+}
+#menu>li:hover ul{
+    display: block;
+}

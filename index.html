@@ -2,70 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个网页</title>
-    <!--内部样式-->
-    <style type="text/css">
-
-    </style>
-    <!--外部样式-->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <!--脚本-->
-    <script>
-
-    </script>
+    <title>My First Html</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 <a name="mao1"></a>
 
-<div id="div1">
-    <h1>JavaScript学习</h1>
+<div id="box0">
+    <!--<img src="img/shamo.jpg" id="img">-->
+    <p id="p1">学无止境</p>
 </div>
-<div id="div2">
-    <!--表格-->
-<table border="1" id="table1"">
-    <caption>一周课程表</caption>
-    <tr bgcolor="#7fffd4">
-        <th>课程表</th><th>星期一</th><th>星期二</th><th>星期三</th>
-        <th>星期四</th><th>星期五</th><th>星期六</th><th>星期日</th>
-    </tr>
-    <tr title="上午第1节">
-        <th rowspan="4" bgcolor="aqua" title="上午课程">上午</th>
-        <td>python</td><td>数学</td><td>英语</td><td>语文</td>
-        <td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-        <tr title="上午第2节">
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>keep</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-        <tr title="上午第3节">
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-        <tr title="上午第4节">
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-    <tr title="下午第1节">
-        <th rowspan="3" bgcolor="aqua" title="下午课程">下午</th>
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-    <tr title="下午第2节">
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-    <tr title="下午第3节">
-        <td>语文</td><td>数学</td><td>英语</td>
-        <td>语文</td><td>语文</td><td>语文</td><td>语文</td>
-    </tr>
-</table>
-</div>
-<div id="div3">
-<p id="hope">希望下次回来，
-    &quot;&lt;学&gt;有所获&quot;</p>
 
+<div id="box1">
+    <ul id="dh">
+        <li><a href="page/week.html">课程表</a>
+        </li><li>
+        <a href="page/form.html">表单练习</a>
+        </li><li>
+        <a href="page/menu.html">菜单练习</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">下拉菜单</a>
+            <div class="dropdown-content" >
+                <a href="#">链接1</a>
+                <a href="#">链接2</a>
+                <a href="#">链接3</a>
+            </div>
+        </li>
+    </ul>
 </div>
-<button onclick="alert('按钮\n单击效果')">单击试验</button>
-<a href="#mao1" >回到顶部</a>
+
+<div id="box2">
+    <div id="box21">
+
+    </div>
+
+    <div id="box22">
+
+    </div>
+</div>
+
+<div id="box3">
+    <span><h4>自律给你自由</h4></span><hr>
+    <a href="#mao1" style="text-decoration: none">回到顶部</a>
+</div>
+
+<div id="box00">
+    <a href="#mao1" style="text-decoration: none;line-height: 70px;display: block;" >&nbsp;</a>
+</div>
+
 </body>
 </html>
