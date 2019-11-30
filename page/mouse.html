@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件练习</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>鼠标进入变红</li>
+        <li>鼠标离开表绿</li>
+        <li>鼠标按下变大</li>
+        <li>鼠标松开复原</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var lis=document.getElementsByTagName("li");
+    for (var i=0;i<lis.length;i++){
+        lis[i].addEventListener("mouseover",function () {
+            this.style.backgroundColor="red"
+        },false);
+        lis[i].addEventListener("mouseout",function () {
+            this.style.backgroundColor="green"
+        },false);
+        lis[i].addEventListener("mousedown",function () {
+            this.style.fontSize=parseInt(getComputedStyle(this,null ).fontSize)*2+"px"
+        },false);
+        lis[i].addEventListener("mouseup",function () {
+            this.style.fontSize=parseInt(getComputedStyle(this,null ).fontSize)/2+"px"
+        },false)
+    }
+    document.addEventListener("mousemove",function () {
+        console.log("鼠标在移动")
+    },false)
+</script>
+</body>
+</html>

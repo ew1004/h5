@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖动练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 70px;
+            height: 70px;
+            background-color: brown;
+            /*text-align: center;*/
+            /*vertical-align: middle;*/
+            /*display: table-cell;*/
+            /*left:0px;*/
+            /*top:0px;*/
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1">
+    <!--<p>点我拖动</p>-->
+</div>
+<script type="text/javascript">
+    var box= document.getElementById("box1");
+    // console.log(box);
+    basex = 0;
+    basey = 0;
+    movex =0;
+    movey =0;
+    box.addEventListener("mousedown",function (e) {
+        var evt= e || window.event;
+        basex=evt.pageX;
+        basey=evt.pageY;
+        document.onmousemove=function (e) {
+            var ee= e || window.event;
+            movex=ee.pageX-basex;
+            basex=ee.pageX;
+            movey=ee.pageY-basey;
+            basey=ee.pageY;
+            box.style.left=box.offsetLeft+movex+"px";
+            box.style.top=box.offsetTop+movey+"px";
+        };
+    },false);
+    document.addEventListener("mouseup",function () {
+        document.onmousemove=null;
+    },false)
+</script>
+</body>
+</html>

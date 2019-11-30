@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播练习</title>
+    <style type="text/css">
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #lb{
+            width: 900px;
+            height: 400px;
+            background: url("../img/lb1.jpg");
+            background-size: 100% 100%;
+            text-align: center;
+            position: relative;
+        }
+        .lr{
+            width: 40px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            background: rgba(29,29,29,0.4);
+            position: absolute;
+            bottom: 50%;
+            display: none;
+        }
+        #lt:hover{
+            background: rgba(29,29,29,0.8);
+        }
+        #lt{
+            float: left;
+        }
+        #rt:hover{
+            background: rgba(29,29,29,0.8);
+        }
+        #rt{
+            right: 0;
+            float: right;
+        }
+        #bt{
+            width: 860px;
+            height: 40px;
+            /*background: #5bf3a9;*/
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right:0;
+        }
+        #bt div{
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background: gray;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="lb">
+    <div id="lt" class="lr"><</div>
+    <div id="rt" class="lr">></div>
+    <div id="bt">
+        <div id="tr1" class="red" title="1">1</div>
+        <div id="tr2" class="red" title="2">2</div>
+        <div id="tr3" class="red" title="3">3</div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var n=1;
+
+    var lb=document.getElementById("lb");
+    var lt=document.getElementById("lt");
+    var rt=document.getElementById("rt");
+    var tr1=document.getElementById("tr1");
+    var tr2=document.getElementById("tr2");
+    var tr3=document.getElementById("tr3");
+    redn(n);
+    //轮播加
+    function lunbo() {
+        if (n<3){
+            n++;
+        } else {
+            n=1;
+        }
+        bgq(n);
+    }
+    //轮播减
+    function lunbob() {
+        if (n<4&&n>1){
+            n--;
+        } else {
+            n=3;
+        }
+        bgq(n);
+
+    }
+    //单机效果
+    lt.onclick=function () {
+        lunbob()
+    }
+    rt.onclick=function () {
+        lunbo()
+    }
+    //单机数字切换
+        //方法一：遍历 ，失败，不知原因？变量名冲突？
+    // var divs=document.getElementsByClassName("red");
+    // for (var i=0;i<divs.length;i++){
+    //     divs[i].onclick=function(e){
+    //         var ee= e || window.event;
+    //         m = ee.target.title;
+    //         bgq(m)
+    //     }
+    // }
+        //方法二：逐个加单机效果
+    tr1.onclick=function () {
+        bgq(1)
+    }
+    tr2.onclick=function () {
+        bgq(2)
+    }
+    tr3.onclick=function () {
+        bgq(3)
+    }
+    //背图切换
+    function bgq(n) {
+        url0="../img/lb"+n+".jpg";
+        url1='url("'+url0+'")';
+        lb.style.backgroundImage=url1;
+        redn(n)
+    }
+    //底部数字变色
+    function redn(n) {
+        switch (n){
+            case 1:tr1.style.background='red';
+                tr2.style.background='gray';
+                tr3.style.background='gray';
+            break;
+            case 2:tr2.style.background='red';
+                tr1.style.background='gray';
+                tr3.style.background='gray';
+            break;
+            case 3:tr3.style.background='red';
+                tr1.style.background='gray';
+                tr2.style.background='gray';
+            break;
+        }
+    }
+    //鼠标在上停止，移动继续
+    var time=setInterval("lunbo()",1500);
+    lb.onmouseover=function () {
+        lt.style.display="block";
+        rt.style.display="block";
+        clearInterval(time)
+
+    };
+    lb.onmouseout=function () {
+        lt.style.display="none";
+        rt.style.display="none";
+        time=setInterval("lunbo()",1500)
+    };
+</script>
+</body>
+</html>

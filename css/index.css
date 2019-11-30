@@ -75,8 +75,10 @@ div{
     background-size: 100% 100%;
     border-radius: 50%;
     position: fixed;
-    right: 40px;
-    bottom: 7px;
+    /*right: 40px;*/
+    /*bottom: 7px;*/
+    left:70px;
+    top:70px;
 }
 .dropdown-content{
     display: none;
